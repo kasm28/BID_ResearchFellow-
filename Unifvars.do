@@ -1,11 +1,11 @@
 ******* Este do file toma el consolidado de los datos extraidos del ICFES-SPADIES y ********
-**********   UNIFICA VARIABLES CON EL FIN DE OPTIMIZAR EL TAMAÑO DE LA BASE    *************
+**********   UNIFICA VARIABLES CON EL FIN DE OPTIMIZAR EL TAMAÃ‘O DE LA BASE    *************
 
 ********************************************************************************************
-**********                Características iniciales de la base                          ****
+**********                CaracterÃ­sticas iniciales de la base                          ****
 ***       Num vars:       243 vars                                                      ****
 ***       Num obs:       8.124.880                                                      ****
-***       Tamaño:       11,336,04 MB                                                    ****
+***       TamaÃ±o:       11,336,04 MB                                                    ****
 ********************************************************************************************
 
 set more off, perm
@@ -393,7 +393,7 @@ egen MOTIVO_IES = rowtotal(estu_por_oportunidades estu_por_amigosestudiando estu
 
 rename EST_CONSECUTIVO = estu_consecutivo
 rename EDAD = estu_edad 
-rename AÑO_EGRESO = estu_anno_egreso
+rename AÃ‘O_EGRESO = estu_anno_egreso
 rename MES_EGRESO = estu_egreso_mes
 rename PERIODO = periodo
 rename 
