@@ -1,0 +1,156 @@
+. gllamm DummyIES icfes_estudiante_genero icfes_familia_personas icfes_familia_ingreso icfes_padre_lee icfes_familia_hermanos icfes_est
+> udiante_trabaja icfes_estudiante_estrato icfes_nivsis nivel_ed_padre nivel_ed_madre edad sb11_total_biologia sb11_total_maths sb11_to
+> tal_filosofia  sb11_total_lenguaje sb11_total_total, i(codigo_icfes colegio_naturaleza)  family(binomial) fv(DummyIES) link(probit) l
+> evel(99) eform nolog adapt trace
+ 
+General model information
+------------------------------------------------------------------------------
+
+dependent variable:         DummyIES
+family:                     binom
+link:                       probit
+denominator:                1
+equation for fixed effects  icfes_estudiante_genero icfes_familia_personas icfes_familia_ingreso icfes_padre_lee icfes_familia_hermanos
+>  icfes_estudiante_trabaja icfes_estudiante_estrato icfes_nivsis nivel_ed_padre nivel_ed_madre edad sb11_total_biologia sb11_total_mat
+> hs sb11_total_filosofia sb11_total_lenguaje sb11_total_total _cons
+  
+Random effects information for 3 level model
+------------------------------------------------------------------------------
+
+ 
+ 
+***level 2 (codigo_icfes) equation(s):
+ 
+   standard deviation of random effect
+   codi1: _cons
+ 
+***level 3 (colegio_naturaleza) equation(s):
+ 
+   standard deviation of random effect
+   cole2: _cons
+ 
+number of level 1 units = 175210
+number of level 2 units = 4998
+number of level 3 units = 2
+ 
+Initial values for fixed effects
+ 
+
+Probit regression                                 Number of obs   =     175210
+                                                  LR chi2(16)     =   49426.14
+                                                  Prob > chi2     =     0.0000
+Log likelihood =  -95460.38                       Pseudo R2       =     0.2056
+
+------------------------------------------------------------------------------
+    DummyIES |      Coef.   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+icfes_est~ro |   .0232893   .0067646     3.44   0.001     .0100309    .0365478
+icfes_fam~as |  -.0265594   .0020565   -12.91   0.000    -.0305901   -.0225287
+icfes_fami~o |   .0762712   .0035274    21.62   0.000     .0693576    .0831849
+icfes_padr~e |   .1043308   .0255658     4.08   0.000     .0542227    .1544389
+icfes_fam~os |  -.0327458   .0023003   -14.24   0.000    -.0372544   -.0282372
+icfes_estu~a |  -.1238668   .0140888    -8.79   0.000    -.1514803   -.0962533
+icfes_est~to |   .0318697   .0040715     7.83   0.000     .0238897    .0398498
+icfes_nivsis |   .0873278   .0024564    35.55   0.000     .0825132    .0921423
+nivel_ed_p~e |   .1279144    .004489    28.49   0.000      .119116    .1367127
+nivel_ed_m~e |   .1403865   .0046469    30.21   0.000     .1312787    .1494943
+        edad |   -.150151   .0045662   -32.88   0.000    -.1591006   -.1412014
+sb11_tot~gia |   -.003669   .0010614    -3.46   0.001    -.0057494   -.0015886
+sb11_total~s |   .0133862    .001006    13.31   0.000     .0114144    .0153579
+sb11_tot~fia |  -.0078605   .0011762    -6.68   0.000    -.0101658   -.0055552
+sb11_total~e |   .0002957    .000287     1.03   0.303    -.0002667    .0008582
+sb11_total~l |   .0121095   .0001481    81.75   0.000     .0118192    .0123998
+       _cons |    .825007   .0854934     9.65   0.000     .6574431    .9925709
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+start running on 26 Feb 2016 at 21:04:26
+------------------------------------------------------------------------------
+Iteration 0 of adaptive quadrature:
+Initial parameters:
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+     icfes_estudiante_genero    icfes_familia_personas     icfes_familia_ingreso           icfes_padre_lee    icfes_familia_hermanos
+y1                  .0232893                 -.0265594                  .0762712                  .1043308                 -.0327458
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+    icfes_estudiante_trabaja  icfes_estudiante_estrato              icfes_nivsis            nivel_ed_padre            nivel_ed_madre
+y1                 -.1238668                  .0318697                  .0873278                  .1279144                  .1403865
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+                        edad       sb11_total_biologia          sb11_total_maths      sb11_total_filosofia       sb11_total_lenguaje
+y1                  -.150151                  -.003669                  .0133862                 -.0078605                  .0002957
+
+                    DummyIES:                 DummyIES:                    codi1:                    cole2:
+            sb11_total_total                     _cons                     _cons                     _cons
+y1                  .0121095                   .825007                        .5                        .5
+
+Updated log likelihood:
+-93703.338 -93969.241 -93775.405 -93698.426 -93662.347 -93641.027 
+-93624.871 -93611.676  -93601.53   -93592.9 -93585.572  -93579.04 
+-93572.511 -93565.985 -93559.463 -93552.944 -93546.429 -93539.918 
+-93533.411 -93526.909 -93520.413 -93513.922 -93507.438 -93500.961 
+-93494.493 -93488.033 -93481.583 -93475.146 -93468.722 -93462.314 
+-93455.926 -93449.562 -93443.228 -93436.932 -93430.686 -93424.512 
+-93418.444 -93412.546 -93406.956 -93401.998 -93398.199 -93394.976 
+-93391.768 -93388.567 -93385.374  -93382.19 -93379.018 -93375.858 
+-93372.715 -93369.591 -93366.492 -93363.424 -93360.397 -93357.427 
+-93354.541 -93351.785 -93349.253 -93347.156 -93345.975 -93345.842 
+-93345.842 
+                                                   log likelihood = -93345.842
+------------------------------------------------------------------------------
+Iteration 1 of adaptive quadrature:
+Updated parameters:
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+     icfes_estudiante_genero    icfes_familia_personas     icfes_familia_ingreso           icfes_padre_lee
+y1                  .0202782                 -.0112827                  .0995848                   .104287
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+      icfes_familia_hermanos  icfes_estudiante_trabaja  icfes_estudiante_estrato              icfes_nivsis
+y1                 -.0374033                 -.0995427                  .0487507                  .0677499
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+              nivel_ed_padre            nivel_ed_madre                      edad       sb11_total_biologia
+y1                  .1089874                  .1218676                 -.1498816                 -.0036426
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+            sb11_total_maths      sb11_total_filosofia       sb11_total_lenguaje          sb11_total_total
+y1                  .0136164                 -.0076713                  .0003928                  .0115195
+
+                    DummyIES:                    codi1:                    cole2:
+                       _cons                     _cons                     _cons
+y1                  .8154069                  .3554386                  .6785754
+
+Updated log likelihood: 
+-93058.486 -93058.382 -93057.002 -93057.002 
+                                                   log likelihood = -93057.002
+------------------------------------------------------------------------------
+Iteration 2 of adaptive quadrature:
+Updated parameters:
+
+Updated parameters:
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+     icfes_estudiante_genero    icfes_familia_personas     icfes_familia_ingreso           icfes_padre_lee
+y1                  .0202782                 -.0112827                  .0995848                   .104287
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+      icfes_familia_hermanos  icfes_estudiante_trabaja  icfes_estudiante_estrato              icfes_nivsis
+y1                 -.0374033                 -.0995427                  .0487507                  .0677499
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+              nivel_ed_padre            nivel_ed_madre                      edad       sb11_total_biologia
+y1                  .1089874                  .1218676                 -.1498816                 -.0036426
+
+                    DummyIES:                 DummyIES:                 DummyIES:                 DummyIES:
+            sb11_total_maths      sb11_total_filosofia       sb11_total_lenguaje          sb11_total_total
+y1                  .0136164                 -.0076713                  .0003928                  .0115195
+
+                    DummyIES:                    codi1:                    cole2:
+                       _cons                     _cons                     _cons
+y1                  .8154069                  .3554386                  .6785754
+
+Updated log likelihood: 
+-93058.486 finish running on 27 Feb 2016 at 13:49:46
