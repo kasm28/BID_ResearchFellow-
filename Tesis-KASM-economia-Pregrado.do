@@ -1,3 +1,67 @@
+/********************************************************************************
+***   This Do file creates a DATASET to evaluate quality in education system  					 ***
+***   on Colombia. We already have information from primary levels average   					 ***
+***   scores (Saber 3, 5, 9). The secondary indivudual score (Saber 11) is   					 ***
+***   already merged with college enrollment (from SPADIES) and its           					 ***
+***   respective institucional information (college and school),             					 ***
+*********************************************************************************
+
+	Creator: Alexandra Sastoque Mendez 
+	First Version: 			April 29th / 2016
+	Date of last version:  	Aug 1st / 2016    (Prev: May 2nd/16)
+
+		Important changes made to do:
+				1)   	Install package to export stata regression outputs and set the output directoy where 
+					we want them to be saved. 
+				2) 	Find a variable to show average scores for each test using 3 main profiencies (science, 
+					maths and language). This, to examine the school´s quality (at primary and secondary
+					levels).
+				2.1)   	Make them cohort comparable (standarize with mean 50, min 0 max 100).
+				3) 	Build a variable to quantify the effect of students expectations generates from school
+					to enroll college (Higer Education, HE).
+				3.1) 	For each student the expectation is equal to the average proportion of college students 
+					who had enroll HE during an specific period of time (i.e last 2 years).	
+				4)   	Transform some independet variables to make easier job at data processing and analysis.
+				4.1) 	Build numeric, cathegoric or dummies variables which contains schools and colleges information:
+					- Dicotomic variables to signalize nature of institutions (private or public). That is a
+					  dummy equal to 1 if it's public (to inquire into public education system as its 
+					  provided by the government) or 0 if it´s private.
+					- Dicotomic variables (altough could be categorical one) to indicate if institutions on
+					  which students are attained at tertiary level are categorized as thecnical, technological 
+					  or universities.
+					- Built a variable (optional) triying robustness controlling population (e.g by ethnicities,
+ 					  regions, calendars on institutions, school days or the highest concentration point) looking 
+					  for cleaner results. In this case we use Bogotá as the highest concentration point, so for each  
+					  student the variable is equal to 1 if its school is from Bogotá or 0 otherwise. 
+				5) 	Build dependent variable on college enrollment. 
+				5.1)	For each student...a dummy equal to 1 if the student has any college code (or value diferent 
+					to missing (.) -it depends on the author's source) from SPADIES dataset, or 0 otherwise. 
+				
+				
+
+*********************************************************************************/
+
+clear all
+set more off
+
+// ColombiaEduDataSet.
+
+global path "/Volumes/Shura/Dropbox/´myuser´/"
+}
+
+qui do "${path}do_files/InitializeGlobals.do"
+
+ssc install outreg2
+
+if "`c(username)'"!="Dani Y Ale" {
+cd "C:\TESIS\DOCUMENTO-TESIS\Results"
+}
+else{
+cd "C:\Documents"
+}
+
+
+
 clear all
 
 set more off
