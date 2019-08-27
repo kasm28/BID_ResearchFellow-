@@ -1,4 +1,4 @@
-/  ********************************************************************************
+/****************************************************************************************
 ***   This Do file creates a DATASET to evaluate quality in education system  					 ***
 ***   on Colombia. We already have information from primary levels average   					 ***
 ***   scores (Saber 3, 5, 9). The secondary indivudual score (Saber 11) is   					 ***
@@ -301,7 +301,7 @@ twoway (scatter sb11_dsps2010_porDEPTO sb11_antes2010_porDEPTO) (function y=x, r
 ********************                                 REGRESIONES         ***** 
 ***************************************************************************************
 
-****** CORRER CON EL PUNTAJE TOTAL DE LA BASE DE LUIS OMAR ****
+****** CORRER CON EL PUNTAJE TOTAL DE LA BASE DE loh ****
 
 rename sb11_antes2010 sb11_total
 
