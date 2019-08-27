@@ -1,4 +1,4 @@
-/********************************************************************************
+/  ********************************************************************************
 ***   This Do file creates a DATASET to evaluate quality in education system  					 ***
 ***   on Colombia. We already have information from primary levels average   					 ***
 ***   scores (Saber 3, 5, 9). The secondary indivudual score (Saber 11) is   					 ***
