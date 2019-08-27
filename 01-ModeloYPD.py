@@ -2,8 +2,8 @@
 # coding: utf-8
 
 # 
-# This script takes data from 'BASE_ID' and 'BASE_MOVIMIENTOS' it first clean up the data from 'BASE_ID', then moves into cleaning 'BASE_MOVIMIENTOS'. It also contains the process followed in order to merge the two obtained dataframes(clean) into a single one 'ypd1'. 
-# The fourth part of this script processes the dataset ('ypd1.csv') -obtained from the merging process- assigned to delvelop the project. It then, takes data from 'BASE_ID' and 'BASE_MOVIMIENTOS' and tries to run a survival analysis for 'customer churn'. 
+# This script takes data from 'BASE_MOVIMIENTOS' and 'BASE_ID' it first clean up the data from 'BASE_MOVIMIENTOS', then moves into cleaning 'BASE_ID'. It also contains the process followed in order to merge the two obtained dataframes(clean) into a single one 'ypd1'. 
+# The fourth part of this script processes the dataset ('df.csv') -obtained from the merging process- assigned to delvelop the project. It then, takes data from 'BASE_ID' and 'BASE_MOVIMIENTOS' and tries to run a survival analysis for 'customer churn'. 
 # 
 # ###	Creator: Karem Alexandra Sastoque Mendez 
 # ###	First Version: 			        Feb 22 / 2019
